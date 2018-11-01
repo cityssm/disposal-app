@@ -9,7 +9,7 @@
   Set conn = CreateObject("ADODB.Connection")
   Set rs = CreateObject("ADODB.Recordset")
 
-  sql = "SELECT *" & _
+  sql = "SELECT ItemKey, ItemName, ShortDescription" & _
     " FROM items.csv" & _
     " where ItemKey in (select ItemKey from itemLocations.csv)"
 
