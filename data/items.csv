@@ -1,8 +1,8 @@
 ItemKey,ItemName,ShortDescription,LongDescription,PictureURL,SearchTerms
-BATTERIES,Batteries - Single Use,"AA, AAA, C, D, 9V, and button cells"
-BLANKETS,Blankets
+BATTERIES,Batteries - Single Use,"AA, AAA, C, D, 9V, and button cells",,,
+BLANKETS,Blankets,,,,
 ELECTRONICS,Electronics,,,,camera cell-phone computer printer telephone television
-NEEDLES,"Needles, Medicinal"
+NEEDLES,"Needles, Medicinal",,,,sharps
 PETSUPPLIES,Pet Supplies,"Toys, leashes, collars",,,cat dog hamster
 STYROFOAM,Styrofoam,Clean white packaging only,,,polystyrene
-TOWELS,Towels,"Old shower towels, old beach towels"
+TOWELS,Towels,"Old shower towels, old beach towels",,,
