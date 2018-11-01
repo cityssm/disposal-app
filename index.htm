@@ -12,17 +12,23 @@
   </head>
   <body>
 
-    <div class="container">
-      <h1>Where do I dispose of this?</h1>
-      <div class="form-group">
-        <input class="form-control" id="searchStr" type="text" placeholder="Search here" />
+    <div class="bg-secondary text-light mb-4">
+      <div class="container py-2">
+        <h1>Where do I dispose of this?</h1>
+        <div class="form-group">
+          <input class="form-control" id="searchStr" type="text" placeholder="Search here" />
+        </div>
+        <div class="list-group" id="container--searchResults"></div>
       </div>
-      <div class="list-group" id="container--searchResults"></div>
     </div>
 
-    <div class="container" id="container--item">
+    <div class="container" id="container--item"></div>
 
-    </div>
+    <footer class="bg-dark text-light mt-4 py-4">
+      <div class="container text-right">
+        Under development by the City of Sault Ste. Marie
+      </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/main.min.js"></script>
