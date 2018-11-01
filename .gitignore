@@ -1,2 +1,6 @@
 
 data/settings.asp
+.eslintrc.yml
+.jshintrc
+.jshintrc.json
+.sass-lint.yml
