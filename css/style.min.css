@@ -1,1 +1,1 @@
-h1,h2{text-align:center}
+html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}*{font-family:'Open Sans', sans-serif;color:#062601}.h100{min-height:100vh}header{color:#062601;background-color:#bbe2f2;border-bottom:1px solid #062601}header input{width:100%;border:1px solid #062601}footer{color:#fff;background-color:#0f4001}h1,h2,h3{font-family:Lato, sans-serif}

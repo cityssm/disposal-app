@@ -1,4 +1,4 @@
-/* global window, document */
+/* global window, document, nanoajax */
 
 (function() {
   "use strict";
@@ -19,29 +19,32 @@
       return;
     }
 
-    searchResultsEle.innerHTML = "<div class=\"list-group-item\">" +
+    searchResultsEle.innerHTML = "<div class=\"search-result center\">" +
       "Searching... <i class=\"fas fa-pulse fa-spinner\" aria-hidden=\"true\"></i>" +
       "</div>";
 
-    $.get("data/itemsJSON.asp", {
-        q: searchStrEle.value
+    nanoajax.ajax({
+        url: "data/itemsJSON.asp?q=" + encodeURIComponent(searchStrEle.value),
+        responseType: "json"
       },
-      function(json) {
+      function(statusCode, json) {
 
         if (json.items.length === 0) {
-          searchResultsEle.innerHTML = "<div class=\"list-group-item list-group-item-info text-center\">" +
+          searchResultsEle.innerHTML = "<div class=\"search-result center\">" +
             "Your search returned no results." +
             "</div>";
 
           return;
         }
 
-        searchResultsEle.innerHTML = json.items.reduce(function(soFar, itemJSON) {
-          return soFar + ("<a class=\"list-group-item\" href=\"#" + itemJSON.itemKey + "\">" +
-            itemJSON.itemName + "<br />" +
-            "<small>" + itemJSON.shortDescription + "</small>" +
-            "</a>");
-        }, "");
+        searchResultsEle.innerHTML = "<ul class=\"list-reset\">" +
+          json.items.reduce(function(soFar, itemJSON) {
+            return soFar + ("<li><a class=\"block\" href=\"#" + itemJSON.itemKey + "\">" +
+              itemJSON.itemName + "<br />" +
+              "<small>" + itemJSON.shortDescription + "</small>" +
+              "</a></li>");
+          }, "") +
+          "</ul>";
 
       }, "json");
   }
@@ -63,10 +66,15 @@
 
     const itemKey = window.location.hash.substring(1);
 
-    $.get("data/itemJSON.asp", {
-        k: itemKey
+    itemContainerEle.innerHTML = "<p class=\"text-center text-muted\">" +
+      "Loading item... <i class=\"fas fa-spinner fa-pulse\"></i>" +
+      "</p>";
+
+    nanoajax.ajax({
+        url: "data/itemJSON.asp?k=" + encodeURIComponent(itemKey),
+        responseType: "json"
       },
-      function(itemJSON) {
+      function(statusCode, itemJSON) {
 
         if (!itemJSON.success) {
           itemContainerEle.innerHTML = "<div class=\"alert alert-info\">" +
@@ -77,14 +85,14 @@
         }
 
         itemContainerEle.innerHTML =
-          "<h1>" + itemJSON.itemName + "</h1>" +
+          "<h1 class=\"pb1 border-bottom\">" + itemJSON.itemName + "</h1>" +
           "<p><strong>" + itemJSON.shortDescription + "</strong></p>" +
           "<p>" + itemJSON.longDescription + "</p>" +
-          "<h2>Locations</h2>" +
+          "<h2 class=\"pb1 border-bottom\">Locations</h2>" +
           itemJSON.locations.reduce(function(soFar, locationJSON) {
             return soFar +
-            "<h3>" + locationJSON.locationName + "</h3>" +
-            "<p><strong>" + locationJSON.shortDescription + "</strong></p>";
+              "<h3>" + locationJSON.locationName + "</h3>" +
+              "<p><strong>" + locationJSON.shortDescription + "</strong></p>";
           }, "");
 
 

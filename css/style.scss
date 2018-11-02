@@ -1,4 +1,59 @@
+// Save Energy theme
+// https://color.adobe.com/Save-Energy-color-theme-210448/
+
+$color--white: #fff;
+
+$color--light-blue: #bbe2f2;
+
+$color--green-0: #062601;
+$color--green-1: #0f4001;
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  color: $color--green-0;
+}
+
+
+.h100 {
+  min-height: 100vh;
+}
+
+
+header {
+  color: $color--green-0;
+  background-color: $color--light-blue;
+  border-bottom: 1px solid $color--green-0;
+
+  input {
+    width: 100%;
+    border: 1px solid $color--green-0;
+  }
+}
+
+footer {
+  color: $color--white;
+  background-color: $color--green-1;
+}
+
+
+
 h1,
-h2 {
-  text-align: center;
+h2,
+h3 {
+  font-family: Lato, sans-serif;
+}
+
+
+.search-result {
 }
