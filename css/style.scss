@@ -13,6 +13,11 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background: #deffff url('../img/sky.jpg') no-repeat scroll top center;
+  background-size: cover;
+}
+
 *,
 *::before,
 *::after {
@@ -20,20 +25,25 @@ html {
 }
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
   color: $color--green-0;
 }
 
 
-.h100 {
+.main {
   min-height: 100vh;
 }
 
 
 header {
   color: $color--green-0;
-  background-color: $color--light-blue;
-  border-bottom: 1px solid $color--green-0;
+
+h1 {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 3em;
+  font-weight: bold;
+}
 
   input {
     width: 100%;
@@ -41,17 +51,20 @@ header {
   }
 }
 
-footer {
-  color: $color--white;
-  background-color: $color--green-1;
+article {
+
+  h1, h2, h3 {
+    font-weight: 500;
+  }
 }
 
+footer {
+  background-color: $color--green-1;
+  font-weight: 300;
 
-
-h1,
-h2,
-h3 {
-  font-family: Lato, sans-serif;
+  * {
+    color: $color--white;
+  }
 }
 
 

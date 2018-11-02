@@ -66,7 +66,7 @@
 
     const itemKey = window.location.hash.substring(1);
 
-    itemContainerEle.innerHTML = "<p class=\"text-center text-muted\">" +
+    itemContainerEle.innerHTML = "<p class=\"center text-muted\">" +
       "Loading item... <i class=\"fas fa-spinner fa-pulse\"></i>" +
       "</p>";
 
@@ -85,14 +85,14 @@
         }
 
         itemContainerEle.innerHTML =
-          "<h1 class=\"pb1 border-bottom\">" + itemJSON.itemName + "</h1>" +
-          "<p><strong>" + itemJSON.shortDescription + "</strong></p>" +
+          "<h1 class=\"h1 pb1 border-bottom\">" + itemJSON.itemName + "</h1>" +
+          "<p>" + itemJSON.shortDescription + "</p>" +
           "<p>" + itemJSON.longDescription + "</p>" +
           "<h2 class=\"pb1 border-bottom\">Locations</h2>" +
           itemJSON.locations.reduce(function(soFar, locationJSON) {
             return soFar +
               "<h3>" + locationJSON.locationName + "</h3>" +
-              "<p><strong>" + locationJSON.shortDescription + "</strong></p>";
+              "<p>" + locationJSON.shortDescription + "</p>";
           }, "");
 
 
