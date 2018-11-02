@@ -86,8 +86,13 @@
 
         itemContainerEle.innerHTML =
           "<h1 class=\"h1 pb1 border-bottom\">" + itemJSON.itemName + "</h1>" +
+          "<div class=\"clearfix\">" +
+          (itemJSON.pictureURL === "" ?
+            "" :
+            "<img class=\"right\" src=\"item-img/" + itemJSON.pictureURL + "\" alt=\"" + itemJSON.itemName + "\" />") +
           "<p>" + itemJSON.shortDescription + "</p>" +
-          "<p>" + itemJSON.longDescription + "</p>" +
+          (itemJSON.longDescription === "" ? "" : "<p>" + itemJSON.longDescription + "</p>") +
+          "</div>" +
           "<h2 class=\"pb1 border-bottom\">Locations</h2>" +
           itemJSON.locations.reduce(function(soFar, locationJSON) {
             return soFar +
