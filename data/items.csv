@@ -1,6 +1,6 @@
 ItemKey,ItemName,ShortDescription,LongDescription,PictureURL,SearchTerms
 BATTERIES,Batteries - Single Use,"AA, AAA, C, D, 9V, and button cells",,batteries.jpg,
-BLANKETS,Blankets,,,,
+BLANKETS,Blankets,,,blankets.jpg,
 ELECTRONICS,Electronics,,,,camera cell-phone computer printer telephone television
 NEEDLES,"Needles, Medicinal",,,,sharps
 PETSUPPLIES,Pet Supplies,"Toys, leashes, collars",,,cat dog hamster

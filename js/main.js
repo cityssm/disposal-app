@@ -86,19 +86,31 @@
 
         itemContainerEle.innerHTML =
           "<h1 class=\"h1 pb1 border-bottom\">" + itemJSON.itemName + "</h1>" +
-          "<div class=\"clearfix\">" +
+          "<div class=\"clearfix px1\">" +
           (itemJSON.pictureURL === "" ?
             "" :
-            "<img class=\"right\" src=\"item-img/" + itemJSON.pictureURL + "\" alt=\"" + itemJSON.itemName + "\" />") +
+            "<img class=\"right fit\" src=\"item-img/" + itemJSON.pictureURL + "\" alt=\"" + itemJSON.itemName + "\" />") +
           "<p>" + itemJSON.shortDescription + "</p>" +
           (itemJSON.longDescription === "" ? "" : "<p>" + itemJSON.longDescription + "</p>") +
           "</div>" +
+
           "<h2 class=\"pb1 border-bottom\">Locations</h2>" +
+          "<div class=\"clearfix\">" +
           itemJSON.locations.reduce(function(soFar, locationJSON) {
             return soFar +
+              "<div class=\"col px1 md-col-6\">" +
               "<h3>" + locationJSON.locationName + "</h3>" +
-              "<p>" + locationJSON.shortDescription + "</p>";
-          }, "");
+              "<p>" + locationJSON.shortDescription + "</p>" +
+              "<p>" + locationJSON.longDescription + "</p>" +
+              (locationJSON.address === "" ?
+                "" :
+                "<p class=\"bold\"><i class=\"fas fa-fw fa-location-arrow\"></i> " + locationJSON.address + "</p>") +
+              (locationJSON.websiteURL === "" ?
+                "" :
+                "<p><i class=\"fas fa-fw fa-link\"></i> <a class=\"bold\" href=\"" + locationJSON.websiteURL + "\" target=\"_blank\">Visit " + locationJSON.locationName + " Website</a></p>") +
+              "</div>";
+          }, "") +
+          "</div>";
 
 
 
