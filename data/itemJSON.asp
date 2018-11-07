@@ -9,8 +9,7 @@
 
   sql = "SELECT top 1 *" & _
     " FROM items.csv" & _
-    " where ItemKey in (select ItemKey from itemLocations.csv)" & _
-    " and ItemKey = ?"
+    " where ItemKey = ?"
 
   conn.Open dataConnectionString
 
@@ -33,7 +32,41 @@
       ",""shortDescription"":""" & str_toJSON(rs.Fields.Item("ShortDescription")) & """" & _
       ",""longDescription"":""" & str_toJSON(rs.Fields.Item("LongDescription")) & """" & _
       ",""pictureURL"":""" & str_toJSON(rs.Fields.Item("PictureURL")) & """" & _
-      ",""locations"":[")
+      ",""reuseIdeas"":[")
+
+    sql = "select *" & _
+      " from reuseIdeas.csv" & _
+      " where ItemKey = ?" & _
+      " order by OrderNumber, IdeaName"
+
+    Set objCommand = Server.CreateObject("ADODB.Command")
+    objCommand.ActiveConnection = conn
+    objCommand.CommandText = sql
+
+    objCommand.Parameters(0).value = request.querystring("k")
+
+    Set rs = objCommand.Execute()
+
+    doComma = false
+
+    do until rs.EOF
+
+      if (doComma) then
+        response.write (",")
+      else
+        doComma = true
+      end if
+
+      response.write ("{" & _
+        """ideaName"":""" & str_toJSON(rs.Fields.Item("IdeaName")) & """" & _
+        ",""ideaDescription"":""" & str_toJSON(rs.Fields.Item("IdeaDescription")) & """" & _
+        ",""websiteURL"":""" & str_toJSON(rs.Fields.Item("WebsiteURL")) & """" & _
+        "}")
+
+      rs.movenext
+    loop
+
+    response.write ("],""locations"":[")
 
     sql = "select l.*" & _
       " from locations.csv l" & _

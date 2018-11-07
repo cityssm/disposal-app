@@ -11,7 +11,8 @@
 
   sql = "SELECT ItemKey, ItemName, ShortDescription" & _
     " FROM items.csv" & _
-    " where ItemKey in (select ItemKey from itemLocations.csv)"
+    " where (ItemKey in (select ItemKey from itemLocations.csv)" & _
+    " or ItemKey in (select ItemKey from reuseIdeas.csv))"
 
   if (request.querystring("q") <> "") then
 

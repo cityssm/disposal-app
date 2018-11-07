@@ -94,23 +94,49 @@
           (itemJSON.longDescription === "" ? "" : "<p>" + itemJSON.longDescription + "</p>") +
           "</div>" +
 
-          "<h2 class=\"pb1 border-bottom\">Locations</h2>" +
-          "<div class=\"clearfix\">" +
-          itemJSON.locations.reduce(function(soFar, locationJSON) {
-            return soFar +
-              "<div class=\"col px1 md-col-6\">" +
-              "<h3>" + locationJSON.locationName + "</h3>" +
-              "<p>" + locationJSON.shortDescription + "</p>" +
-              "<p>" + locationJSON.longDescription + "</p>" +
-              (locationJSON.address === "" ?
-                "" :
-                "<p class=\"bold\"><i class=\"fas fa-fw fa-location-arrow\"></i> " + locationJSON.address + "</p>") +
-              (locationJSON.websiteURL === "" ?
-                "" :
-                "<p><i class=\"fas fa-fw fa-link\"></i> <a class=\"bold\" href=\"" + locationJSON.websiteURL + "\" target=\"_blank\">Visit " + locationJSON.locationName + " Website</a></p>") +
-              "</div>";
-          }, "") +
-          "</div>";
+          (itemJSON.reuseIdeas.length === 0 ?
+            "" :
+            "<h2 class=\"pb1 border-bottom\"><i class=\"fas fa-recycle\" aria-hidden=\"true\"></i> Reuse Ideas</h2>" +
+            itemJSON.reuseIdeas.reduce(function(soFar, ideaJSON) {
+              return soFar +
+                ("<div class=\"clearfix px1 border\">" +
+                  "<div class=\"left p2 mr1\">" +
+                  "<i class=\"far fa-2x fa-lightbulb\" aria-hidden=\"true\"></i>" +
+                  "</div>" +
+                  "<h3>" +
+                  ideaJSON.ideaName +
+                  "</h3>" +
+                  "<p>" + ideaJSON.ideaDescription + "</p>" +
+                  (ideaJSON.websiteURL === "" ?
+                    "" :
+                    "<p><i class=\"fas fa-fw fa-link\"></i> <a class=\"bold\" href=\"" + ideaJSON.websiteURL + "\" target=\"_blank\">More Information on this Idea</a></p>") +
+                  "</div>");
+
+            }, "") +
+            "") +
+
+          (itemJSON.locations.length === 0 ?
+            "" :
+            "<h2 class=\"pb1 border-bottom\">Locations</h2>" +
+            itemJSON.locations.reduce(function(soFar, locationJSON) {
+              return soFar +
+                "<div class=\"clearfix px2 mb1 border\">" +
+                "<h3>" + locationJSON.locationName + "</h3>" +
+                ("<div class=\"col md-col-6\">" +
+                  "<p>" + locationJSON.shortDescription + "</p>" +
+                  "<p>" + locationJSON.longDescription + "</p>" +
+                  "</div>") +
+                "<div class=\"col md-col-1\">&nbsp;</div>" +
+                ("<div class=\"col md-col-5\">" +
+                  (locationJSON.address === "" ?
+                    "" :
+                    "<p class=\"bold\"><i class=\"fas fa-fw fa-location-arrow\"></i> " + locationJSON.address + "</p>") +
+                  (locationJSON.websiteURL === "" ?
+                    "" :
+                    "<p><i class=\"fas fa-fw fa-link\"></i> <a class=\"bold\" href=\"" + locationJSON.websiteURL + "\" target=\"_blank\">Visit " + locationJSON.locationName + " Website</a></p>") +
+                  "</div>") +
+                "</div>";
+            }, ""));
 
 
 
