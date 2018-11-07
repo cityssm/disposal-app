@@ -10,9 +10,9 @@
   Set rs = CreateObject("ADODB.Recordset")
 
   sql = "SELECT ItemKey, ItemName, ShortDescription" & _
-    " FROM items.csv" & _
-    " where (ItemKey in (select ItemKey from itemLocations.csv)" & _
-    " or ItemKey in (select ItemKey from reuseIdeas.csv))"
+    " FROM items" & tableNameSuffix & _
+    " where (ItemKey in (select ItemKey from itemLocations" & tableNameSuffix & ")" & _
+    " or ItemKey in (select ItemKey from reuseIdeas" & tableNameSuffix & "))"
 
   if (request.querystring("q") <> "") then
 
@@ -23,9 +23,9 @@
         searchTermClean = replace(searchTerm, "'", "''")
 
         sql = sql & (" and (" & _
-          "lcase(ItemName) like '%" & searchTermClean & "%'" & _
-          " or lcase(ShortDescription) like '%" & searchTermClean & "%'" & _
-          " or lcase(SearchTerms) like '%" & searchTermClean & "%'" & _
+          lowerCaseFunction & "(ItemName) like '%" & searchTermClean & "%'" & _
+          " or " & lowerCaseFunction & "(ShortDescription) like '%" & searchTermClean & "%'" & _
+          " or " & lowerCaseFunction & "(SearchTerms) like '%" & searchTermClean & "%'" & _
           ")")
 
       next
@@ -33,7 +33,6 @@
     end if
 
   sql = sql & " order by ItemName"
-
 
   conn.Open dataConnectionString
 
@@ -55,8 +54,8 @@
 
     response.write ("{" & _
       """itemKey"":""" & rs.Fields.Item("ItemKey") & """" & _
-      ",""itemName"":""" & str_toJSON(rs.Fields.Item("ItemName")) & """" & _
-      ",""shortDescription"":""" & str_toJSON(rs.Fields.Item("ShortDescription")) & """" & _
+      ",""itemName"":""" & str_toJSON(coalesce(rs.Fields.Item("ItemName"), "")) & """" & _
+      ",""shortDescription"":""" & str_toJSON(coalesce(rs.Fields.Item("ShortDescription"), "")) & """" & _
       "}")
     rs.MoveNext
   Loop

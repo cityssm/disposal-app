@@ -4,3 +4,4 @@ data/settings.asp
 .jshintrc
 .jshintrc.json
 .sass-lint.yml
+data/sqlite3.exe

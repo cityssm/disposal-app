@@ -16,4 +16,12 @@
     str_toJSON = text
 
   end function
+
+  function coalesce (value, valueIfNull)
+    coalesce = value
+
+    if (isnull(value)) then
+      coalesce = valueIfNull
+    end if
+  end function
 %>
