@@ -10,7 +10,7 @@ responsible recycling.
 **Are you a business or organization that accepts items from the Sault Ste. Marie area
 for reuse or responsible disposal?**
 
-Reach out [via email](mailto:info@cityssm.on.ca?subject=Where do I dispose of this Update)
+Reach out [via email](mailto:info@cityssm.on.ca?subject=Where+do+I+dispose+of+this+Update)
 or by [opening an issue on this repository](https://github.com/cityssm/disposal-app/issues/new)
 describing yourself and the kinds of items you accept.
 
