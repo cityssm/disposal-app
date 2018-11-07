@@ -24,10 +24,15 @@ Please include:
 
 ## Helpful Links
 
-[Waste Management on the City of Sault Ste. Marie website](http://saultstemarie.ca/City-Hall/City-Departments/Public-Works-Engineering-Services/Public-Works/Waste-Management.aspx)
+- [Waste Management on the City of Sault Ste. Marie website](http://saultstemarie.ca/City-Hall/City-Departments/Public-Works-Engineering-Services/Public-Works/Waste-Management.aspx)
 
 ## Credits
 
 - [Basscss](http://basscss.com/)
 - [nanoajax](https://github.com/yanatan16/nanoajax)
 - [Google Fonts](https://fonts.google.com/)
+
+## Useful Links - Database Drivers
+
+- CSV (Recommended for quick development) - [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/en-ca/download/details.aspx?id=13255)
+- SQLite (Recommended for production) - [SQLite ODBC Driver](http://www.ch-werner.de/sqliteodbc/)
