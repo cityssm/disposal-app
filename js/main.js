@@ -10,6 +10,8 @@
   const searchStrEle = document.getElementById("searchStr");
   const searchResultsEle = document.getElementById("container--searchResults");
 
+  const searchResultsLimit = 9;
+
   function displaySearch() {
 
     const searchValue = searchStrEle.value.trim();
@@ -19,7 +21,7 @@
       return;
     }
 
-    searchResultsEle.innerHTML = "<div class=\"search-result center\">" +
+    searchResultsEle.innerHTML = "<div class=\"center\">" +
       "Searching... <i class=\"fas fa-pulse fa-spinner\" aria-hidden=\"true\"></i>" +
       "</div>";
 
@@ -30,21 +32,28 @@
       function(statusCode, json) {
 
         if (json.items.length === 0) {
-          searchResultsEle.innerHTML = "<div class=\"search-result center\">" +
+          searchResultsEle.innerHTML = "<div class=\"center\">" +
             "Your search returned no results." +
             "</div>";
 
           return;
         }
 
-        searchResultsEle.innerHTML = "<ul class=\"list-reset\">" +
-          json.items.reduce(function(soFar, itemJSON) {
-            return soFar + ("<li><a class=\"block\" href=\"#" + itemJSON.itemKey + "\">" +
-              itemJSON.itemName + "<br />" +
-              "<small>" + itemJSON.shortDescription + "</small>" +
-              "</a></li>");
-          }, "") +
-          "</ul>";
+        searchResultsEle.innerHTML = json.items.reduce(function(soFar, itemJSON, index) {
+
+          if (index >= searchResultsLimit) {
+            return soFar;
+          }
+
+          return soFar + ("<div class=\"sm-col sm-col-4 search-result\"" +
+            ">" +
+            "<a class=\"block border m1\"" +
+            (itemJSON.pictureURL === "" ? "" : " style=\"background-image:url('item-img/" + itemJSON.pictureURL + "');\"") +
+            " href=\"#" + itemJSON.itemKey + "\">" +
+            "<span class=\"p1\">" + itemJSON.itemName + "</span>" +
+            "</a>" +
+            "</div>");
+        }, "");
 
       }, "json");
   }

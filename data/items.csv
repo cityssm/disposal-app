@@ -3,8 +3,8 @@ APPLIANCES,Appliances - Household,"Washers, dryers, stoves, refrigerators.",,,
 CANS,"Pop cans, steel food cans",,,,tin soup soda aluminum
 BATTERIES,Batteries - Single Use,"AA, AAA, C, D, 9V, and button cells",,batteries.jpg,
 BLANKETS,Blankets,,,blankets.jpg,
-BOTTLES-GLASS,"Glass bottles, glass jars",,,,
-BOTTLES-PLASTIC-1,Plastic Bottles - Number 1,"Pop bottles, water bottles.",,,pete
+BOTTLES-GLASS,"Glass bottles, glass jars",,,bottles-glass.jpg,
+BOTTLES-PLASTIC-1,Plastic Bottles - Number 1,"Pop bottles, water bottles.",,bottles-plastic-1.jpg,pete
 BOTTLES-PLASTIC-2,Plastic Bottles - Number 2,"Shampoo bottles.",,,hdpe
 BUILDING-SUPPLIES,Building Supplies,"Cabinets, flooring, doors, windows, lighting fixtures, kitchen sinks, lumber, moldings, plumbing fixtures",,,
 ELECTRONICS,Electronics,,,,camera cell-phone computer printer telephone television

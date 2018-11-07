@@ -9,7 +9,7 @@
   Set conn = CreateObject("ADODB.Connection")
   Set rs = CreateObject("ADODB.Recordset")
 
-  sql = "SELECT ItemKey, ItemName, ShortDescription" & _
+  sql = "SELECT ItemKey, ItemName, ShortDescription, PictureURL" & _
     " FROM items" & tableNameSuffix & _
     " where (ItemKey in (select ItemKey from itemLocations" & tableNameSuffix & ")" & _
     " or ItemKey in (select ItemKey from reuseIdeas" & tableNameSuffix & "))"
@@ -56,6 +56,7 @@
       """itemKey"":""" & rs.Fields.Item("ItemKey") & """" & _
       ",""itemName"":""" & str_toJSON(coalesce(rs.Fields.Item("ItemName"), "")) & """" & _
       ",""shortDescription"":""" & str_toJSON(coalesce(rs.Fields.Item("ShortDescription"), "")) & """" & _
+      ",""pictureURL"":""" & str_toJSON(coalesce(rs.Fields.Item("PictureURL"), "")) & """" & _
       "}")
     rs.MoveNext
   Loop

@@ -53,14 +53,16 @@ h1 {
 
 article {
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-weight: 500;
   }
 }
 
 footer {
-  background-color: $color--green-1;
   font-weight: 300;
+  background-color: $color--green-1;
 
   * {
     color: $color--white;
@@ -69,4 +71,28 @@ footer {
 
 
 .search-result {
+
+  a {
+    min-height: 20em;
+    text-decoration: none;
+    background-image: url('../img/recycle.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: $color--green-0;
+
+    &:hover span,
+    &:focus span {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    display: block;
+    background-color: $color--green-0;
+    color: $color--white;
+    font-weight: bold;
+  }
+
+
 }
