@@ -12,6 +12,10 @@
 
   const searchResultsLimit = 9;
 
+  function clearSearchResults() {
+    searchResultsEle.innerHTML = "";
+  }
+
   function displaySearch() {
 
     const searchValue = searchStrEle.value.trim();
@@ -57,10 +61,17 @@
             "</div>");
         }, "");
 
+        const linkEles = searchResultsEle.getElementsByTagName("a");
+        let index;
+        for (index = 0; index < linkEles.length; index += 1) {
+          linkEles[index].addEventListener("click", clearSearchResults);
+        }
+
       }, "json");
   }
 
   searchStrEle.addEventListener("keyup", displaySearch);
+  searchStrEle.addEventListener("focus", displaySearch);
 
   /*
    * ITEM VIEW
@@ -72,7 +83,7 @@
 
     if (hashChangeEvent) {
       hashChangeEvent.preventDefault();
-      searchResultsEle.innerHTML = "";
+      clearSearchResults();
     }
 
     const itemKey = window.location.hash.substring(1);
