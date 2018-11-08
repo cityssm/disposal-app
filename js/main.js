@@ -47,10 +47,12 @@
 
           return soFar + ("<div class=\"sm-col sm-col-4 search-result\"" +
             ">" +
-            "<a class=\"block border m1\"" +
-            (itemJSON.pictureURL === "" ? "" : " style=\"background-image:url('item-img/" + itemJSON.pictureURL + "');\"") +
-            " href=\"#" + itemJSON.itemKey + "\">" +
+            "<a class=\"block border m1\" href=\"#" + itemJSON.itemKey + "\">" +
             "<span class=\"p1\">" + itemJSON.itemName + "</span>" +
+            "<div class=\"image-wrapper\">" +
+            "<div class=\"image\"" +
+            (itemJSON.pictureURL === "" ? "" : " style=\"background-image:url('item-img/" + itemJSON.pictureURL + "');\"") +
+            "></div></div>" +
             "</a>" +
             "</div>");
         }, "");
