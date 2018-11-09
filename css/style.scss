@@ -38,12 +38,13 @@ body {
 
 header {
   color: $color--green-0;
+  background-color: #deffff; // $color--light-blue;
 
-h1 {
-  font-family: 'Patrick Hand', cursive;
-  font-size: 3em;
-  font-weight: bold;
-}
+  h1 label {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2em;
+    font-weight: bold;
+  }
 
   input {
     width: 100%;
