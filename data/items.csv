@@ -1,17 +1,20 @@
 ItemKey,ItemName,ShortDescription,LongDescription,PictureURL,SearchTerms
 APPLIANCES-LARGE,Appliances - Large Household,"Washers, dryers, stoves, refrigerators.",,,
-APPLIANCES-SMALL,Appliances - Small Household,"Toasters, lamps,",,,
+APPLIANCES-SMALL,Appliances - Small Household,"Toasters, lamps,",,toaster.jpg,
 BARBECUES,Barbecues,,,barbecue.jpg,outdoor grill bbq
-BATTERIES-LARGE,Batteries - Large,"Automobile batteries",,,
-BATTERIES-SMALL,Batteries - Single Use,"AA, AAA, C, D, 9V, and button cells",,batteries.jpg,
+BATTERIES-LARGE,Batteries - Large,"Automobile batteries",,batteries-large.jpg,power
+BATTERIES-SMALL,Batteries - Single Use,"AA, AAA, C, D, 9V, and button cells",,batteries.jpg,power
 BEAMS-METAL,Metal Beams,,,,
 BLANKETS,Blankets,,,blankets.jpg,
 BOOKS,Books,,,books.jpg,novels textbooks reading
+BOTTLES-BEER,Beer Bottles,,,bottles-beer.jpg,glass
 BOTTLES-GLASS,"Glass bottles, glass jars",,,bottles-glass.jpg,
 BOTTLES-PLASTIC-1,Plastic Bottles - Number 1,"Pop bottles, water bottles.",,bottles-plastic-1.jpg,pete
 BOTTLES-PLASTIC-2,Plastic Bottles - Number 2,"Shampoo bottles.",,,hdpe
+BOTTLES-WINE,Wine Bottles,,,,glass
 BUILDING-SUPPLIES,Building Supplies,"Cabinets, flooring, doors, windows, lighting fixtures, kitchen sinks, lumber, moldings, plumbing fixtures",,,
 CANS,"Pop cans, steel food cans",,,,tin soup soda aluminum
+CANS-BEER,"Beer Cans",,,,aluminum
 CAR-PARTS,"Car parts",,,,engines brake tanks
 CARS,"Cars and trucks",,,,vehicles
 CLOTHING-GENTLYUSED,Clothing - Gently Used,"Shirts, pants, dresses",,,
@@ -28,8 +31,9 @@ METAL,Scrap Metal,"Copper, brass, aluminum, stainless steel",,metal.jpg,
 MEDICATIONS,Medication,"Prescription drugs, medical creams.",,pills.jpg,pills inhalers antifungal antibacterial
 NEEDLES,"Needles, Medicinal",,,needles.jpg,sharps syringes pens lancets
 PAINT-NEW,Paint Cans - New,,,,
-PAPER,Paper,"Newspapers, flyers, magazines, phone books, paper egg cartons, toilet paper rolls, paper towel rolls, clean milk cartons, all other paper products.",,,
+PAPER,Paper,"Newspapers, flyers, phone books, paper egg cartons, toilet paper rolls, paper towel rolls, clean milk cartons, all other paper products.",,,
 PAPER-CARDBOARD,Cardboard,"Pizza boxes, shipping boxes",,cardboard.jpg,
+PAPER-MAGAZINES,Magazines,,,,
 PETSUPPLIES,Pet Supplies,"Toys, leashes, collars",,,cat dog hamster
 PILLOWS,Pillows,,,,
 PIPES-METAL,Metal Pipes,,,pipe-metal.jpg,
@@ -38,6 +42,7 @@ PURSES,Purses,,,,handbags
 SHOES-GENTLYUSED,Shoes - Gently Used,,,,boots footwear sneakers
 STYROFOAM,Styrofoam,Clean white packaging only,,,polystyrene
 STYROFOAM-MEATTRAYS,Styrofoam Meat Trays,,,,polystyrene
+TIN-FOIL,Tin foil - Clean,,,,aluminum
 TIRES-CAR,Rubber Tires - Car,,,tires-car.jpg,wheels rubber
 TOWELS,Towels,"Shower towels, beach towels",,towels.jpg,
 YARDWASTE,Yard Waste,"Leaves, grass clippings, garden waste",,,hay straw
