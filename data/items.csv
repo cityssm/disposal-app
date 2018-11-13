@@ -1,7 +1,7 @@
 ItemKey,ItemName,ShortDescription,LongDescription,PictureURL,SearchTerms
 APPLIANCES-LARGE,Appliances - Large Household,"Washers, dryers, stoves, refrigerators.",,,
 APPLIANCES-SMALL,Appliances - Small Household,"Toasters, lamps,",,,
-BARBECUES,Barbecues,,,,
+BARBECUES,Barbecues,,,barbecue.jpg,outdoor grill bbq
 BATTERIES-LARGE,Batteries - Large,"Automobile batteries",,,
 BATTERIES-SMALL,Batteries - Single Use,"AA, AAA, C, D, 9V, and button cells",,batteries.jpg,
 BEAMS-METAL,Metal Beams,,,,
@@ -23,20 +23,21 @@ ELECTRONICS-SMARTPHONE,Smart Phones,,,smartphone.jpg,tablets ipads iphones andro
 FABRIC,Fabric,,,fabric.jpg,material
 FLUORESCENT-LIGHTS,Fluorescent Lights,"Fluorescent lights, lamps and tubes",,,fluorescent light lamp tube
 JACKETS,Jackets,,,jacket.jpg,coats
-LUGGAGE,Luggage,,,,suitcase baggage
-METAL,Scrap Metal,"Copper, brass, aluminum, stainless steel",,,
+LUGGAGE,Luggage,,,luggage.jpg,suitcase baggage
+METAL,Scrap Metal,"Copper, brass, aluminum, stainless steel",,metal.jpg,
 MEDICATIONS,Medication,"Prescription drugs, medical creams.",,pills.jpg,pills inhalers antifungal antibacterial
 NEEDLES,"Needles, Medicinal",,,needles.jpg,sharps syringes pens lancets
 PAINT-NEW,Paint Cans - New,,,,
-PAPER,Paper,"Newspapers, flyers, magazines, phone books, cardboard boxes, paper egg cartons, toilet paper rolls, paper towel rolls, clean milk cartons, clean pizza boxes, all other paper products.",,,
+PAPER,Paper,"Newspapers, flyers, magazines, phone books, paper egg cartons, toilet paper rolls, paper towel rolls, clean milk cartons, all other paper products.",,,
+PAPER-CARDBOARD,Cardboard,"Pizza boxes, shipping boxes",,cardboard.jpg,
 PETSUPPLIES,Pet Supplies,"Toys, leashes, collars",,,cat dog hamster
 PILLOWS,Pillows,,,,
 PIPES-METAL,Metal Pipes,,,pipe-metal.jpg,
 PROPANE-CYLINDERS,Propane Cylinders - Barbeque,"Small green, Large 20 lb.",,,tanks
 PURSES,Purses,,,,handbags
-SHOES-GENTLYUSED,Shoes - Gently Used,,,,
+SHOES-GENTLYUSED,Shoes - Gently Used,,,,boots footwear sneakers
 STYROFOAM,Styrofoam,Clean white packaging only,,,polystyrene
 STYROFOAM-MEATTRAYS,Styrofoam Meat Trays,,,,polystyrene
-TIRES-CAR,Tires - Car,,,,wheels rubber
-TOWELS,Towels,"Shower towels, beach towels",,,
+TIRES-CAR,Rubber Tires - Car,,,tires-car.jpg,wheels rubber
+TOWELS,Towels,"Shower towels, beach towels",,towels.jpg,
 YARDWASTE,Yard Waste,"Leaves, grass clippings, garden waste",,,hay straw

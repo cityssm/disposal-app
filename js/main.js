@@ -108,7 +108,7 @@
 
         itemContainerEle.innerHTML =
           "<h1 class=\"h1 pb1 border-bottom\">" + itemJSON.itemName + "</h1>" +
-          "<div class=\"clearfix px1\">" +
+          "<div class=\"clearfix\">" +
           (itemJSON.pictureURL === "" ?
             "" :
             "<img class=\"right fit\" src=\"item-img/" + itemJSON.pictureURL + "\" alt=\"" + itemJSON.itemName + "\" />") +
