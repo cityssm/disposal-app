@@ -101,6 +101,7 @@
         ",""shortDescription"":""" & str_toJSON(coalesce(rs.Fields.Item("ShortDescription"), "")) & """" & _
         ",""longDescription"":""" & str_toJSON(coalesce(rs.Fields.Item("LongDescription"), "")) & """" & _
         ",""websiteURL"":""" & str_toJSON(coalesce(rs.Fields.Item("WebsiteURL"), "")) & """" & _
+        ",""phoneNumber"":""" & str_toJSON(coalesce(rs.Fields.Item("PhoneNumber"), "")) & """" & _
         "}")
 
       rs.movenext

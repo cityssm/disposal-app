@@ -140,6 +140,7 @@
           (itemJSON.locations.length === 0 ?
             "" :
             "<h2 class=\"pb1 border-bottom\">Locations</h2>" +
+            "<p>Remember that some locations may have specific hours when they accept items. If you are unfamiliar with the business or organization, consider visiting their website or calling ahead first.</p>" +
             itemJSON.locations.reduce(function(soFar, locationJSON) {
               return soFar +
                 "<div class=\"clearfix px2 mb1 border\">" +
@@ -153,6 +154,9 @@
                   (locationJSON.address === "" ?
                     "" :
                     "<p class=\"bold\"><i class=\"fas fa-fw fa-location-arrow\"></i> " + locationJSON.address + "</p>") +
+                  (locationJSON.phoneNumber === "" ?
+                    "" :
+                    "<p class=\"bold\"><i class=\"fas fa-fw fa-phone\"></i> " + locationJSON.phoneNumber + "</p>") +
                   (locationJSON.websiteURL === "" ?
                     "" :
                     "<p><i class=\"fas fa-fw fa-link\"></i> <a class=\"bold\" href=\"" + locationJSON.websiteURL + "\" target=\"_blank\">Visit " + locationJSON.locationName + " Website</a></p>") +

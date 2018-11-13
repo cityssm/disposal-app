@@ -1,6 +1,8 @@
 ItemKey,ItemName,ShortDescription,LongDescription,PictureURL,SearchTerms
-APPLIANCES,Appliances - Household,"Washers, dryers, stoves, refrigerators.",,,
+APPLIANCES-LARGE,Appliances - Large Household,"Washers, dryers, stoves, refrigerators.",,,
+APPLIANCES-SMALL,Appliances - Small Household,"Toasters, lamps,",,,
 CANS,"Pop cans, steel food cans",,,,tin soup soda aluminum
+CUTLERY,"Forks, spoons, knives",,,,
 BATTERIES,Batteries - Single Use,"AA, AAA, C, D, 9V, and button cells",,batteries.jpg,
 BLANKETS,Blankets,,,blankets.jpg,
 BOOKS,Books,,,,novels textbooks reading
@@ -8,17 +10,25 @@ BOTTLES-GLASS,"Glass bottles, glass jars",,,bottles-glass.jpg,
 BOTTLES-PLASTIC-1,Plastic Bottles - Number 1,"Pop bottles, water bottles.",,bottles-plastic-1.jpg,pete
 BOTTLES-PLASTIC-2,Plastic Bottles - Number 2,"Shampoo bottles.",,,hdpe
 BUILDING-SUPPLIES,Building Supplies,"Cabinets, flooring, doors, windows, lighting fixtures, kitchen sinks, lumber, moldings, plumbing fixtures",,,
+CLOTHING-GENTLYUSED,Clothing - Gently Used,"Shirts, pants, dresses",,,
+DISHES,Dishes,,,,
 ELECTRONICS,Electronics,,,,camera cell-phone computer printer telephone television
 ELECTRONICS-GAME-CONSOLES,Video Game Consoles,,,xbox.jpg,xbox playstation nintendo
 ELECTRONICS-SMARTPHONE,Smart Phones,,,smartphone.jpg,tablets ipads iphones android phablets
+FABRIC,Fabric,,,,
 FLUORESCENT-LIGHTS,Fluorescent Lights,"Fluorescent lights, lamps and tubes",,,fluorescent light lamp tube
+JACKETS,Jackets,,,,coats
+LUGGAGE,Luggage,,,,
 MEDICATIONS,Medication,"Prescription drugs, medical creams.",,pills.jpg,pills inhalers antifungal antibacterial
 NEEDLES,"Needles, Medicinal",,,needles.jpg,sharps syringes pens lancets
 PAPER,Paper,"Newspapers, flyers, magazines, phone books, cardboard boxes, paper egg cartons, toilet paper rolls, paper towel rolls, clean milk cartons, clean pizza boxes, all other paper products.",,,
 PETSUPPLIES,Pet Supplies,"Toys, leashes, collars",,,cat dog hamster
+PILLOWS,Pillows,,,,
 PROPANE-CYLINDERS,Propane Cylinders - Barbeque,"Small green, Large 20 lb.",,,tanks
+PURSES,Purses,,,,handbags
+SHOES-GENTLYUSED,Shoes - Gently Used,,,,
 STYROFOAM,Styrofoam,Clean white packaging only,,,polystyrene
 STYROFOAM-MEATTRAYS,Styrofoam Meat Trays,,,,polystyrene
-TOWELS,Towels,"Old shower towels, old beach towels",,,
+TOWELS,Towels,"Shower towels, beach towels",,,
 YARDWASTE,Yard Waste,"Leaves, grass clippings, garden waste",,,hay straw
 PAINT-NEW,Paint Cans - New,,,,
