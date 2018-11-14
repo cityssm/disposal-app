@@ -6,6 +6,7 @@ BATTERIES-LARGE,Batteries - Large,"Automobile batteries",,batteries-large.jpg,po
 BATTERIES-SMALL,Batteries - Single Use,"AA, AAA, C, D, 9V, and button cells",,batteries.jpg,power
 BEAMS-METAL,Metal Beams,,,,
 BLANKETS,Blankets,,,blankets.jpg,
+BLURAY,Blu-Ray Movies,,,,disc blue
 BOOKS,Books,,,books.jpg,novels textbooks reading
 BOTTLES-BEER,Beer Bottles,,,bottles-beer.jpg,glass
 BOTTLES-GLASS,"Glass bottles, glass jars",,,bottles-glass.jpg,
@@ -21,6 +22,7 @@ CIGARETTES,"Cigarette Waste",,,,smokes tobacco filters
 CLOTHING-GENTLYUSED,Clothing - Gently Used,"Shirts, pants, dresses",,,
 CUTLERY,"Cutlery - Forks, spoons, knives",,,cutlery.jpg,utensils eating dining
 DISHES,Dishes,,,dishes.jpg,plates dining dinner
+DVDS,DVD Movies,,,,video disc
 ELECTRONICS,Electronics,,,computers.jpg,camera cell-phone computer printer telephone television laptop desktop
 ELECTRONICS-GAME-CONSOLES,Video Game Consoles,,,xbox.jpg,xbox playstation nintendo
 ELECTRONICS-SMARTPHONE,Smart Phones,,,smartphone.jpg,tablets ipads iphones android phablets
@@ -40,7 +42,7 @@ PETSUPPLIES,Pet Supplies,"Toys, leashes, collars",,,cat dog hamster
 PILLOWS,Pillows,,,pillows.jpg,cushions
 PIPES-METAL,Metal Pipes,,,pipe-metal.jpg,tubes
 PROPANE-CYLINDERS,Propane Cylinders - Barbeque,"Small green, Large 20 lb.",,,tanks
-PURSES,Purses,,,,handbags
+PURSES,Purses,,,,handbags clutch
 SHOES-GENTLYUSED,Shoes - Gently Used,,,,boots footwear sneakers
 SPORTS-HOCKEY,Hockey Equipment,,,,pads skates helmets goalie
 STYROFOAM,Styrofoam,Clean white packaging only,,,polystyrene

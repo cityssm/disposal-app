@@ -112,12 +112,18 @@
 
         itemContainerEle.innerHTML =
           "<h1 class=\"h1 pb1 border-bottom\">" + itemJSON.itemName + "</h1>" +
-          "<div class=\"clearfix\">" +
+          "<div class=\"md-flex\">" +
+
           (itemJSON.pictureURL === "" ?
             "" :
-            "<img class=\"right fit\" src=\"item-img/" + itemJSON.pictureURL + "\" alt=\"" + itemJSON.itemName + "\" />") +
+            "<div class=\"center\">" +
+            "<img class=\"fit\" src=\"item-img/" + itemJSON.pictureURL + "\" alt=\"" + itemJSON.itemName + "\" />" +
+            "</div>" +
+          "<div class=\"px1 xs-hide sm-hide\"></div>") +
+          "<div class=\"flex-auto\">" +
           "<p>" + itemJSON.shortDescription + "</p>" +
           (itemJSON.longDescription === "" ? "" : "<p>" + itemJSON.longDescription + "</p>") +
+          "</div>" +
           "</div>" +
 
           (itemJSON.reuseIdeas.length === 0 ?
