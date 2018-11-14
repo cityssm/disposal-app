@@ -121,17 +121,19 @@
             "<h2 class=\"pb1 border-bottom\"><i class=\"fas fa-recycle\" aria-hidden=\"true\"></i> Reuse Ideas</h2>" +
             itemJSON.reuseIdeas.reduce(function(soFar, ideaJSON) {
               return soFar +
-                ("<div class=\"clearfix px1 border\">" +
-                  "<div class=\"left p2 mr1\">" +
-                  "<i class=\"far fa-2x fa-lightbulb\" aria-hidden=\"true\"></i>" +
-                  "</div>" +
-                  "<h3>" +
-                  ideaJSON.ideaName +
-                  "</h3>" +
-                  "<p>" + ideaJSON.ideaDescription + "</p>" +
-                  (ideaJSON.websiteURL === "" ?
-                    "" :
-                    "<p><i class=\"fas fa-fw fa-link\"></i> <a class=\"bold\" href=\"" + ideaJSON.websiteURL + "\" target=\"_blank\">More Information on this Idea</a></p>") +
+                ("<div class=\"flex px2 mb1 border\">" +
+                  ("<div class=\"py2 pr2\">" +
+                    "<i class=\"far fa-2x fa-lightbulb\" aria-hidden=\"true\"></i>" +
+                    "</div>") +
+                  ("<div class=\"flex-auto\">" +
+                    "<h3>" +
+                    ideaJSON.ideaName +
+                    "</h3>" +
+                    "<p>" + ideaJSON.ideaDescription + "</p>" +
+                    (ideaJSON.websiteURL === "" ?
+                      "" :
+                      "<p><i class=\"fas fa-fw fa-link\"></i> <a class=\"bold\" href=\"" + ideaJSON.websiteURL + "\" target=\"_blank\">More Information on this Idea</a></p>") +
+                    "</div>") +
                   "</div>");
 
             }, "") +
