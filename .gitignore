@@ -5,3 +5,4 @@ data/settings.asp
 .jshintrc.json
 .sass-lint.yml
 data/sqlite3.exe
+web.config
