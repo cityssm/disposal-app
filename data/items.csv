@@ -14,12 +14,12 @@ BOTTLES-PLASTIC-1,Plastic Bottles - Number 1,"Pop bottles, water bottles.",,bott
 BOTTLES-PLASTIC-2,Plastic Bottles - Number 2,"Shampoo bottles.",,,hdpe
 BOTTLES-WINE,Wine Bottles,,,,glass
 BUILDING-SUPPLIES,Building Supplies,"Cabinets, flooring, doors, windows, lighting fixtures, kitchen sinks, lumber, moldings, plumbing fixtures",,,
-CANS,"Pop cans, steel food cans",,,,tin soup soda aluminum
-CANS-BEER,"Beer Cans",,,,aluminum
+CANS,"Pop cans, steel food cans",,,cans-food.jpg,tin soup soda aluminum
+CANS-BEER,"Beer Cans",,,cans-beer.jpg,aluminum
 CAR-PARTS,"Car parts",,,,engines brake tanks
-CARS,"Cars and trucks",,,,vehicles
-CIGARETTES,"Cigarette Waste",,,,smokes tobacco filters
-CLOTHING-GENTLYUSED,Clothing - Gently Used,"Shirts, pants, dresses",,,
+CARS,"Cars and trucks",,,car.jpg,vehicles
+CIGARETTES,"Cigarette Waste",,,cigarettes.jpg,smokes tobacco filters butts
+CLOTHING-GENTLYUSED,Clothing - Gently Used,"Shirts, pants, dresses",,clothing.jpg,
 CUTLERY,"Cutlery - Forks, spoons, knives",,,cutlery.jpg,utensils eating dining
 DISHES,Dishes,,,dishes.jpg,plates dining dinner
 DVDS,DVD Movies,,,,video disc
@@ -43,7 +43,7 @@ PILLOWS,Pillows,,,pillows.jpg,cushions
 PIPES-METAL,Metal Pipes,,,pipe-metal.jpg,tubes
 PROPANE-CYLINDERS,Propane Cylinders - Barbeque,"Small green, Large 20 lb.",,,tanks
 PURSES,Purses,,,,handbags clutch
-SHOES-GENTLYUSED,Shoes - Gently Used,,,,boots footwear sneakers
+SHOES-GENTLYUSED,Shoes - Gently Used,,,shoes.jpg,boots footwear sneakers
 SPORTS-HOCKEY,Hockey Equipment,,,,pads skates helmets goalie
 STYROFOAM,Styrofoam,Clean white packaging only,,,polystyrene
 STYROFOAM-MEATTRAYS,Styrofoam Meat Trays,,,,polystyrene
