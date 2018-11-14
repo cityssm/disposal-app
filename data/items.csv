@@ -42,13 +42,13 @@ PETSUPPLIES,Pet Supplies,"Toys, leashes, collars",,,cat dog hamster
 PILLOWS,Pillows,,,pillows.jpg,cushions
 PIPES-METAL,Metal Pipes,,,pipe-metal.jpg,tubes
 PROPANE-CYLINDERS,Propane Cylinders - Barbeque,"Small green, Large 20 lb.",,,tanks
-PURSES,Purses,,,,handbags clutch
+PURSES,Purses,,,purse.jpg,handbags clutch
 SHOES-GENTLYUSED,Shoes - Gently Used,,,shoes.jpg,boots footwear sneakers
-SPORTS-HOCKEY,Hockey Equipment,,,,pads skates helmets goalie
+SPORTS-HOCKEY,Hockey Equipment,,,hockey.jpg,pads skates helmets goalie sport
 STYROFOAM,Styrofoam,Clean white packaging only,,,polystyrene
 STYROFOAM-MEATTRAYS,Styrofoam Meat Trays,,,,polystyrene
 TIN-FOIL,Tin foil - Clean,,,,aluminum
 TIRES-CAR,Rubber Tires - Car,,,tires-car.jpg,wheels rubber
 TOWELS,Towels,"Shower towels, beach towels",,towels.jpg,
 WRITING-INSTRUMENTS,Writing Instruments,"Pens, pencils, markers, highlighters",,pens.jpg,
-YARDWASTE,Yard Waste,"Leaves, grass clippings, garden waste",,,hay straw
+YARDWASTE,Yard Waste,"Leaves, grass clippings, garden waste",,leaves.jpg,hay straw
