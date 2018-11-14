@@ -19,3 +19,10 @@ drop index if exists idx_reuseIdeas;
 drop table if exists reuseIdeas;
 .import reuseIdeas.csv reuseIdeas
 create index idx_reuseIdeas on reuseIdeas (ItemKey, OrderNumber);
+
+drop index if exists idx_relatedItems_a;
+drop index if exists idx_relatedItems_b;
+drop table if exists relatedItems;
+.import relatedItems.csv relatedItems
+create unique index idx_relatedItems_a on relatedItems (ItemKeyA, ItemKeyB);
+create index idx_relatedItems_b on relatedItems (ItemKeyB, ItemKeyA);

@@ -7,6 +7,8 @@
   Set conn = CreateObject("ADODB.Connection")
   Set rs = CreateObject("ADODB.Recordset")
 
+  itemKey = request.querystring("k")
+
   sql = "SELECT *" & _
     " FROM items" & tableNameSuffix & _
     " where ItemKey = ?"
@@ -17,7 +19,7 @@
   objCommand.ActiveConnection = conn
   objCommand.CommandText = sql
 
-  objCommand.Parameters(0).value = request.querystring("k")
+  objCommand.Parameters(0).value = itemKey
 
   Set rs = objCommand.Execute()
 
@@ -43,7 +45,7 @@
     objCommand.ActiveConnection = conn
     objCommand.CommandText = sql
 
-    objCommand.Parameters(0).value = request.querystring("k")
+    objCommand.Parameters(0).value = itemKey
 
     Set rs = objCommand.Execute()
 
@@ -78,7 +80,7 @@
     objCommand.ActiveConnection = conn
     objCommand.CommandText = sql
 
-    objCommand.Parameters(0).value = request.querystring("k")
+    objCommand.Parameters(0).value = itemKey
 
     Set rs = objCommand.Execute()
 
@@ -102,6 +104,46 @@
         ",""longDescription"":""" & str_toJSON(coalesce(rs.Fields.Item("LongDescription"), "")) & """" & _
         ",""websiteURL"":""" & str_toJSON(coalesce(rs.Fields.Item("WebsiteURL"), "")) & """" & _
         ",""phoneNumber"":""" & str_toJSON(coalesce(rs.Fields.Item("PhoneNumber"), "")) & """" & _
+        "}")
+
+      rs.movenext
+    loop
+
+    response.write ("],""relatedItems"":[")
+
+    sql = "select distinct ItemKey, ItemName, ShortDescription, PictureURL" & _
+      " from items" & tableNameSuffix & " i" & _
+      " inner join (" & _
+      " select ItemKeyA as RelatedItemKey" & _
+      " from relatedItems" & tableNameSuffix & _
+      " where ItemKeyB = '" & replace(itemKey, "'", "''") & "'" & _
+      " union select ItemKeyB as RelatedItemKey" & _
+      " from relatedItems" & tableNameSuffix & _
+      " where ItemKeyA = '" & replace(itemKey, "'", "''") & "'" & _
+      ") r on i.ItemKey = r.RelatedItemKey" & _
+      " order by ItemName"
+
+    Set objCommand = Server.CreateObject("ADODB.Command")
+    objCommand.ActiveConnection = conn
+    objCommand.CommandText = sql
+
+    Set rs = objCommand.Execute()
+
+    doComma = false
+
+    do until rs.EOF
+
+      if (doComma) then
+        response.write (",")
+      else
+        doComma = true
+      end if
+
+      response.write ("{" & _
+        """itemKey"":""" & rs.Fields.Item("ItemKey") & """" & _
+        ",""itemName"":""" & str_toJSON(coalesce(rs.Fields.Item("ItemName"), "")) & """" & _
+        ",""shortDescription"":""" & str_toJSON(coalesce(rs.Fields.Item("ShortDescription"), "")) & """" & _
+        ",""pictureURL"":""" & str_toJSON(coalesce(rs.Fields.Item("PictureURL"), "")) & """" & _
         "}")
 
       rs.movenext

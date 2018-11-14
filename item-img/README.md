@@ -1,4 +1,6 @@
 # Picture Credit
 
-Most if not all of the images used as examples are from [Pixabay](https://pixabay.com/),
-an amazing website for royalty free, stock photography.
+This project takes advantage of royalty free, public domain photography from:
+- [Free-Images.com](https://free-images.com/)
+- [Pixabay](https://pixabay.com/)
+- [Wikimedia](https://commons.wikimedia.org/)

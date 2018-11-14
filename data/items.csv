@@ -1,6 +1,6 @@
 ItemKey,ItemName,ShortDescription,LongDescription,PictureURL,SearchTerms
-APPLIANCES-LARGE,Appliances - Large Household,"Washers, dryers, stoves, refrigerators.",,,
-APPLIANCES-SMALL,Appliances - Small Household,"Toasters, lamps,",,toaster.jpg,
+APPLIANCES-LARGE,Appliances - Large Household,"Washers, dryers, stoves, refrigerators.",,washing-machine.jpg,
+APPLIANCES-SMALL,Appliances - Small Household,"Toasters, lamps, microwaves.",,toaster.jpg,
 BARBECUES,Barbecues,,,barbecue.jpg,outdoor grill bbq
 BATTERIES-LARGE,Batteries - Large,"Automobile batteries",,batteries-large.jpg,power
 BATTERIES-SMALL,Batteries - Single Use,"AA, AAA, C, D, 9V, and button cells",,batteries.jpg,power
@@ -21,12 +21,12 @@ CIGARETTES,"Cigarette Waste",,,,smokes tobacco filters
 CLOTHING-GENTLYUSED,Clothing - Gently Used,"Shirts, pants, dresses",,,
 CUTLERY,"Cutlery - Forks, spoons, knives",,,cutlery.jpg,utensils eating dining
 DISHES,Dishes,,,dishes.jpg,plates dining dinner
-ELECTRONICS,Electronics,,,,camera cell-phone computer printer telephone television laptop desktop
+ELECTRONICS,Electronics,,,computers.jpg,camera cell-phone computer printer telephone television laptop desktop
 ELECTRONICS-GAME-CONSOLES,Video Game Consoles,,,xbox.jpg,xbox playstation nintendo
 ELECTRONICS-SMARTPHONE,Smart Phones,,,smartphone.jpg,tablets ipads iphones android phablets
-FABRIC,Fabric,,,fabric.jpg,material
+FABRIC,Fabric,,,fabric.jpg,material cloth textile
 FLUORESCENT-LIGHTS,Fluorescent Lights,"Fluorescent lights, lamps and tubes",,,fluorescent light lamp tube
-INK-CARTRIDGES,Ink and Toner Cartridges,,,,printer copier
+INK-CARTRIDGES,Ink and Toner Cartridges,,,ink-cartridges.jpg,printer copier
 JACKETS,Jackets,,,jacket.jpg,coats
 LUGGAGE,Luggage,,,luggage.jpg,suitcase baggage
 METAL,Scrap Metal,"Copper, brass, aluminum, stainless steel",,metal.jpg,
@@ -35,10 +35,10 @@ NEEDLES,"Needles, Medicinal",,,needles.jpg,sharps syringes pens lancets
 PAINT-NEW,Paint Cans - New,,,,
 PAPER,Paper,"Newspapers, flyers, phone books, paper egg cartons, toilet paper rolls, paper towel rolls, clean milk cartons, all other paper products.",,,
 PAPER-CARDBOARD,Cardboard,"Pizza boxes, shipping boxes",,cardboard.jpg,
-PAPER-MAGAZINES,Magazines,,,,
+PAPER-MAGAZINES,Magazines,,,magazines.jpg,catalogues
 PETSUPPLIES,Pet Supplies,"Toys, leashes, collars",,,cat dog hamster
-PILLOWS,Pillows,,,,
-PIPES-METAL,Metal Pipes,,,pipe-metal.jpg,
+PILLOWS,Pillows,,,pillows.jpg,cushions
+PIPES-METAL,Metal Pipes,,,pipe-metal.jpg,tubes
 PROPANE-CYLINDERS,Propane Cylinders - Barbeque,"Small green, Large 20 lb.",,,tanks
 PURSES,Purses,,,,handbags
 SHOES-GENTLYUSED,Shoes - Gently Used,,,,boots footwear sneakers
@@ -48,5 +48,5 @@ STYROFOAM-MEATTRAYS,Styrofoam Meat Trays,,,,polystyrene
 TIN-FOIL,Tin foil - Clean,,,,aluminum
 TIRES-CAR,Rubber Tires - Car,,,tires-car.jpg,wheels rubber
 TOWELS,Towels,"Shower towels, beach towels",,towels.jpg,
-WRITING-INSTRUMENTS,Writing Instruments,"Pens, pencils, markers, highlighters",,,
+WRITING-INSTRUMENTS,Writing Instruments,"Pens, pencils, markers, highlighters",,pens.jpg,
 YARDWASTE,Yard Waste,"Leaves, grass clippings, garden waste",,,hay straw

@@ -12,6 +12,19 @@
 
   const searchResultsLimit = 9;
 
+  function getItemResultHTML(itemJSON) {
+    return ("<div class=\"sm-col sm-col-4 search-result\"" +
+      ">" +
+      "<a class=\"block border m1\" href=\"#" + itemJSON.itemKey + "\">" +
+      "<span class=\"p1\">" + itemJSON.itemName + "</span>" +
+      "<div class=\"image-wrapper\">" +
+      "<div class=\"image\"" +
+      (itemJSON.pictureURL === "" ? "" : " style=\"background-image:url('item-img/" + itemJSON.pictureURL + "');\"") +
+      "></div></div>" +
+      "</a>" +
+      "</div>");
+  }
+
   function clearSearchResults() {
     searchResultsEle.innerHTML = "";
   }
@@ -49,16 +62,7 @@
             return soFar;
           }
 
-          return soFar + ("<div class=\"sm-col sm-col-4 search-result\"" +
-            ">" +
-            "<a class=\"block border m1\" href=\"#" + itemJSON.itemKey + "\">" +
-            "<span class=\"p1\">" + itemJSON.itemName + "</span>" +
-            "<div class=\"image-wrapper\">" +
-            "<div class=\"image\"" +
-            (itemJSON.pictureURL === "" ? "" : " style=\"background-image:url('item-img/" + itemJSON.pictureURL + "');\"") +
-            "></div></div>" +
-            "</a>" +
-            "</div>");
+          return soFar + getItemResultHTML(itemJSON);
         }, "");
 
         const linkEles = searchResultsEle.getElementsByTagName("a");
@@ -136,8 +140,7 @@
                     "</div>") +
                   "</div>");
 
-            }, "") +
-            "") +
+            }, "")) +
 
           (itemJSON.locations.length === 0 ?
             "" :
@@ -164,7 +167,17 @@
                     "<p><i class=\"fas fa-fw fa-link\"></i> <a class=\"bold\" href=\"" + locationJSON.websiteURL + "\" target=\"_blank\">Visit " + locationJSON.locationName + " Website</a></p>") +
                   "</div>") +
                 "</div>";
-            }, ""));
+            }, "")) +
+
+          (itemJSON.relatedItems.length === 0 ?
+            "" :
+            "<h2 class=\"pb1 border-bottom\">Related Items</h2>" +
+            "<div class=\"clearfix\">" +
+            itemJSON.relatedItems.reduce(function(soFar, relatedItemJSON) {
+              return soFar + getItemResultHTML(relatedItemJSON);
+            }, "") +
+            "</div>"
+          );
 
 
 
